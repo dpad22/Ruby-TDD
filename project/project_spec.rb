@@ -1,8 +1,8 @@
 require_relative 'project' # include our Project class in our spec file
 RSpec.describe Project do  
     before(:each) do 
-        @project1 = Project.new('Project 1', 'description 1','David P')
-        @project2 = Project.new('Project 2', 'description 2','David P') 
+        @project1 = Project.new('Project 1', 'description 1', 'David P')
+        @project2 = Project.new('Project 2', 'description 2', 'David P') 
         # create a new project and make sure we can set the name attribute
     end
     it 'has a getter and setter for name attribute' do
@@ -17,9 +17,8 @@ RSpec.describe Project do
         expect(@project1.owner).to eq("Owner name")
     end
 
-    it 'has a method elevator_pitch to explain name and description' do
-        expect(@project1.elevator_pitch).to eq("Project 1, description 1,David P")
-        expect(@project2.elevator_pitch).to eq("Project 2, description 2,David P")
+    it 'has a method elevator_pitch to explain name, description, and owner' do
+        expect(@project1.elevator_pitch).to eq("Project 1, description 1, David P")
     end
 
     it 'has a method tasks to return the tasks for each project' do

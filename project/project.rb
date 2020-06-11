@@ -19,7 +19,7 @@ class Project
     end
 
     def elevator_pitch
-        puts "#{@name}, #{@description}"
+        "#{@name}, #{@description}, #{@owner}"
     end
 
 end
